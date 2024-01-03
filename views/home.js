@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { styles } from "./styles";
+import { ImageBackground } from "react-native";
 
 const Home = ({ navigation }) => {
   const songs = [
@@ -60,21 +61,26 @@ const Home = ({ navigation }) => {
     </TouchableOpacity>
   );
   return (
-    <ScrollView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        <Text style={styles.Title}>
-          Selecciona tu mágico cuento para el día de hoy 123 =) ¡
-        </Text>
-        <View style={styles.containerimages}>
-          {renderImage(songs[0])}
-          {renderImage(songs[1])}
+    <ImageBackground
+      source={require('../src/assets/fondo-home.png')}
+      style={{ flex: 1 }}
+    >
+      <ScrollView style={{ flex: 1 }}>
+        <View style={styles.container}>
+          <Text style={styles.Title}>
+            Selecciona tu mágico cuento para el día de hoy 123 =) ¡
+          </Text>
+          <View style={styles.containerimages}>
+            {renderImage(songs[0])}
+            {renderImage(songs[1])}
+          </View>
+          <View style={styles.containerimages}>
+            {renderImage(songs[2])}
+            {renderImage(songs[3])}
+          </View>
         </View>
-        <View style={styles.containerimages}>
-          {renderImage(songs[2])}
-          {renderImage(songs[3])}
-        </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 

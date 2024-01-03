@@ -3,13 +3,16 @@ import { StyleSheet, Dimensions } from "react-native";
 const wHeight = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    uri: '../src/assets/fondo-home.png'
+},
   container: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
     paddingTop: 50,
-    backgroundColor: "#F7B9D7",
+   // backgroundColor: "#F7B9D7",
     height: wHeight,
   },
   containerimages: {
@@ -61,10 +64,14 @@ const styles = StyleSheet.create({
     color: "blue",
   },
   Title: {
-    fontSize: 20,
-    textAlign: "center",
-    color: "blue",
+    fontSize: 30,
+    fontWeight: '700',
+    textAlign: 'center',
     marginBottom: 37,
+    textShadowColor: '#00003d', 
+    textShadowOffset: { width: 2, height: 2 }, 
+    textShadowRadius: 5, 
+    color: '#1e90ff',
   },
   buttonShare: {
     position: "absolute",
